@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import NavBar from '../NavBar/NavBar';
 
 import './home.css';
+import banner from '../../Assets/Images/banner.png'
+import Image from 'next/image';
 
 const Home = () => {
     const [email, setEmail] = useState('');
@@ -17,22 +19,6 @@ const Home = () => {
     return (
         <>
             <div className="landing-container">
-                {/* Navigation */}
-                {/* <nav className="navbar">
-                    <div className="logo">
-                        <span>🌱</span>
-                        HabitShare
-                    </div>
-                    <ul className="nav-links">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#community">Community</a></li>
-                    </ul>
-                    <div className="nav-buttons">
-                        <button className="btn btn-secondary">Login</button>
-                        <button className="btn btn-primary">Sign Up</button>
-                    </div>
-                </nav> */}
                 <NavBar />
 
                 {/* Hero Section */}
@@ -66,17 +52,14 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="hero-visual">
-                            <div className="hero-image-placeholder">
-                                <div className="placeholder-content">
-                                    <div className="placeholder-icon">📊</div>
-                                    <div className="placeholder-text">Habit Dashboard Preview</div>
-                                </div>
+                            <div className="hero-image-container">
+                                <Image src={banner} alt="Habit Dashboard" className="hero-banner-image" />
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Features Section */}
+                {/* Rest of your sections remain the same */}
                 <section className="features-section" id="features">
                     <div className="section-header">
                         <div className="section-badge">Why Choose Us</div>
@@ -110,7 +93,6 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* How It Works */}
                 <section className="how-it-works" id="how-it-works">
                     <div className="section-header">
                         <div className="section-badge">Simple Process</div>
@@ -144,7 +126,6 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* Stats Section */}
                 <section className="stats-section">
                     <div className="stats-grid">
                         <div className="stat-item">
@@ -166,7 +147,6 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* CTA Section */}
                 <section className="cta-section">
                     <div className="cta-container">
                         <h2 className="cta-title">Ready to Transform Your Life?</h2>
@@ -188,7 +168,6 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* Footer */}
                 <footer className="footer">
                     <div className="footer-content">
                         <div className="footer-section">

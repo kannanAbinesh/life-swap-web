@@ -672,3 +672,38 @@
         font-size: 2rem;
     }
 }
+
+/* Replace the .hero-image-placeholder styles with these: */
+
+.hero-image-container {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hero-image-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 70px rgba(20, 184, 166, 0.4);
+}
+
+.hero-banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Optional: Add a subtle border/glow effect */
+.hero-image-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    border: 2px solid rgba(20, 184, 166, 0.2);
+    pointer-events: none;
+}
